@@ -12,20 +12,23 @@
       <div class="nav">
         <ul class="menubar">
           <li id="home" onclick="setActive(this.id)"><a href="#home">Home</a></li>
-          <li id="login" onclick="setActive(this.id)" class=""><a href="#login">Login</a></li>
-          <li id="register" onclick="setActive(this.id)" class=""><a href="#register">Register</a></li>
-          <li id="updateusr" onclick="setActive(this.id)" class=""><a href="#updateuser">Update User</a></li>
-          <li id="createorder" onclick="setActive(this.id)" class=""><a href="#createorder">Create order</a></li>
-          <li id="dropdownli" class="dropdown"><a href="javascript:void(0)" class="dropbtn">Dropdown</a>
+          <li id="createorder" onclick="setActive(this.id)"><a href="#createorder">Create order</a></li>
+          <li id="dropdownli" class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">User</a>
             <div class="dropdown-content">
-              <a href="#link1" id="link1" onclick="setActive(this.id)">Link 1</a>
-              <a href="#link2" id="link2" onclick="setActive(this.id)" class="activo">Link 2</a>
-              <a href="#link3" id="link3" onclick="setActive(this.id)">Link 3</a>
+              <a href="#login" id="login" onclick="setActive(this.id)">Login</a>
+              <a href="#register" id="register" onclick="setActive(this.id)" class="activo">Register</a>
+              <a href="#updateusr" id="updateusr" onclick="setActive(this.id)">Update User Data</a>
             </div> 
           </li>
         </ul>
       </div>
-      <div id="homediv" class="pagediv">Home</div>
+      <div id="homediv" class="pagediv">Home
+          <div class="contentpagediv">
+            <div class="contentleft"></div>
+            <div class="contentright"></div>
+          </div>
+      </div>
       <div id="logindiv" class="pagediv hide">Login</div>
       <div id="registerdiv" class="pagediv hide">Register</div>
       <div id="updateusrdiv" class="pagediv hide">Update user</div>
@@ -34,8 +37,7 @@
       <div id="link2div" class="pagediv hide">Link 2</div>
       <div id="link3div" class="pagediv hide">Link 3</div>
     </div>
-
-<div class="clear"></div>
+      <div class="clear"></div>
       <div class="footer">
         <!--FOOTERCONTAINER-->
         <div class="footercontainer">
