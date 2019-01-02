@@ -1,22 +1,18 @@
 function setActive(itemID) {
   let item = document.getElementById(itemID);
   let text = document.getElementsByClassName("activo")[0];
-  let divId = document.getElementById(itemID).id+'div';
- // alert(item.id);
- //text = 'homediv';
-//alert(text);
-
+  let divId = document.getElementById(itemID).id + "div";
+  let hdiv = document.getElementById("homediv").className.trim();
+ 
   if (text) {
     document.getElementById(text.id).classList.remove("activo");
-    document.getElementById(text.id+'div').classList.add("hide");
-   // document.getElementById(text.id+'div').classList.remove("pagediv");
-   console.log(text.id+'; ' + divId);
-   }
-   
-    item.classList.add("activo");
-    document.getElementById(divId).classList.remove("hide");
-}
+    document.getElementById(text.id + "div").classList.add("hide");
+  }
 
-$('.message a').click(function(){
-  $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
-});
+  if (hdiv === "pagediv") {
+    document.getElementById("homediv").classList.add("hide");
+  }
+
+  item.classList.add("activo");
+  document.getElementById(divId).classList.remove("hide");
+}
