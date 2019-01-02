@@ -254,7 +254,47 @@ a {
 .topmenu li {
   float: left;
 }
+/*Content Page */
+.contentpagediv{
+  float: left;;
+  width: 100%;
+}
+.contentleft{
+  background-color: #2b2b2b;
+  float: left;
+  width: 70%;
+}
+.contentright{
+  float: left;
+  width: 30%;
+}
 
-.activo {
-  background-color: #c41900;
+/*Login FORM*/
+form {border: 3px solid #f1f1f1;}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.formcontainer {
+  padding: 16px;
 }
