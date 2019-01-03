@@ -6,11 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Pizza della Mama</title>
     <link rel="stylesheet" href="css/style.css" />
+    <script src="js/menuitems.js"></script>
   </head>
-  <body>
+  <body onload="getMenuItems()">
     <div class="wrap">
-      <div class="nav">
-        <ul class="menubar">
+      <div id="navdiv" class="nav">
+        <ul id="menubar" class="menubar">
           <li id="home" onclick="setActive(this.id)"><a>Home</a></li>
           <li id="createorder" onclick="setActive(this.id)"><a>Create order</a></li>
           <li id="login" onclick="setActive(this.id)"><a>Login</a></li>
@@ -24,7 +25,7 @@
             <div class="contentleft">sdf</div>
             <div class="contentright">
               <div class="loginform">
-                <form action="/action_page.php">
+                <form action="">
                   <div class="container">
                     <label for="uname"><b>Username</b></label>
                     <input type="text" placeholder="Enter Username" name="uname" required>
