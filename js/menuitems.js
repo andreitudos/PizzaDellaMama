@@ -1,5 +1,5 @@
 function getMenuItems() {
-  var menuitem = [
+  let menuitem = [
     "Home",
     "Login",
     "Register",
@@ -20,7 +20,7 @@ function getMenuItems() {
       let item = document.createElement("li");
       let aItem = document.createElement("a");
       aItem.appendChild(document.createTextNode(itemText));
- 
+
       item.setAttribute("id", itemText.replace(/\s/g, "").toLowerCase());
       item.setAttribute("onclick", "setActive(this.id)");
 
@@ -36,4 +36,115 @@ function getMenuItems() {
   }
   // Add the contents of options[0] to #foo:
   document.getElementById("navdiv").appendChild(menuUL(menuitem));
+}
+
+//GET Pizza Bases
+function getPizzaBase() {
+  let pizzabase = [{ "description": "Pequiena", "price": 5.00 },
+  { "description": "Media", "price": 8.00 },
+  { "description": "Grande", "price": 10.00 }];
+
+
+
+  //let arraFromJson = JSON.parse(pizzabase);
+
+  function baselist(array) {
+    // Create the list element:
+
+
+    let form = document.createElement("form");
+    let fragment = document.createDocumentFragment();
+    let btnIngredinetes = document.createElement('input');
+    btnIngredinetes.setAttribute('type', 'button');
+    btnIngredinetes.setAttribute('value', 'Ingredientes >');
+
+    fragment.appendChild(btnIngredinetes);
+
+
+
+    for (let x in array) {
+      //  alert(array[x].price);
+      let item = document.createElement('input');
+      form.appendChild(document.createTextNode(array[x].description));
+      item.setAttribute('type', 'radio');
+      item.setAttribute('name', 'base');
+      item.setAttribute('value', array[x].price);
+      form.appendChild(item);
+
+      form.appendChild(document.createElement('br'));
+    }
+
+    form.appendChild(document.createElement('br'));
+    form.appendChild(document.createTextNode('Quantidade: '));
+    form.appendChild(document.createElement('input'));
+    form.appendChild(document.createElement('br'));
+    form.appendChild(document.createElement('br'));
+    form.appendChild(fragment);
+
+
+    //Return the constructed list:
+    return form;
+  }
+
+  // Add the contents of
+
+  document.getElementById("formdiv").appendChild(baselist(pizzabase));
+
+}
+
+//GET Ingredients
+function getIngredients() {
+  let ingredients = [
+    "Molho de Tomate",
+    "Mozzarella",
+    "Parmesão",
+    "Gorgonzola",
+    "Queijo da Serra",
+    "Fiambre",
+    "Presunto",
+    "Chouriço",
+    "Pepperoni",
+    "Ananás",
+    "Maçã",
+    "Banana"
+  ];
+
+  let element = document.getElementById('formdiv');
+  let fragment = document.createDocumentFragment();
+  let btnConcluir = document.createElement('input');
+  btnConcluir.setAttribute('type', 'button');
+  btnConcluir.setAttribute('value', 'Concluir >');
+
+
+  ingredients.forEach(function (ingredient) {
+
+    let checkbox = document.createElement('input');
+    checkbox.setAttribute('type', 'checkbox');
+    checkbox.setAttribute('value', ingredient);
+    let label = document.createTextNode(ingredient);
+    // alert(ingredient);
+    //text.textContent = c
+    fragment.appendChild(checkbox);
+    fragment.appendChild(label);
+    fragment.appendChild(document.createElement('br'));
+    fragment.appendChild(btnConcluir);
+
+  });
+  // Add the contents of
+  element.appendChild(fragment);
+}
+
+
+function startTest() {
+  alert('Function started');
+}
+
+
+
+function fstart() {
+  //startTest();
+  getMenuItems();
+  getPizzaBase();
+  getIngredients();
+
 }

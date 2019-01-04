@@ -8,14 +8,18 @@
     <link rel="stylesheet" href="css/style.css" />
     <script src="js/menuitems.js"></script>
   </head>
-  <body onload="getMenuItems()">
+  <body onload="fstart()">
     <div class="wrap">
-      <div id="navdiv" class="nav">
-     
-      </div>
+      <!--Navigationn Bar-->
+      <div id="navdiv" class="nav"></div>
+      <!--End Navigationn Bar-->
+
+      <!-- Page Content-->
       <div id="homediv" class="pagediv">
           <div class="contentpagediv">
-            <div class="contentleft"></div>
+            <div class="contentleft">
+              <div id="formdiv"></div>
+            </div>
             <div class="contentright">
               <div class="loginform">
                 <form action="">
@@ -39,6 +43,7 @@
       <div id="link2div" class="pagediv hide">Link 2</div>
       <div id="link3div" class="pagediv hide">Link 3</div>
     </div>
+    <!--End Page Content-->
       <div class="clear"></div>
       <div class="footer">
         <!--FOOTERCONTAINER-->
