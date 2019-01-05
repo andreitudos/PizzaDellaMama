@@ -10,6 +10,13 @@ let loged = false;
 
 function getUser(usr, pwd){
     
+    for (let item of users) {
+        if (item.nome === usr && item.password === pwd) {
+          return item
+        }
+    };
+
+
     let user = users.reduce((result, item) => {
         if (item.nome === usr && item.password === pwd) { result = item }
         return result
@@ -17,5 +24,4 @@ function getUser(usr, pwd){
 
       console.log(user);
 };
-
 
