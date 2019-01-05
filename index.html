@@ -7,6 +7,7 @@
     <title></title>
     <link rel="stylesheet" href="css/style.css" />
     <script src="js/menuitems.js"></script>
+    <script src="js/users.js"></script>
   </head>
   <body onload="fstart()">
     <div class="wrap">
@@ -16,24 +17,32 @@
 
       <!-- Page Content-->
       <div id="homediv" class="pagediv">
-          <div class="contentpagediv">
-            <div class="contentleft">
-              <div id="formdiv"></div>
-            </div>
-            <div class="contentright">
-              <div class="loginform">
-                <form action="">
-                  <div class="container">
-                    <label for="uname"><b>Username</b></label>
-                    <input type="text" placeholder="Enter Username" name="uname" required>
-                    <label for="psw"><b>Password</b></label>
-                    <input type="password" placeholder="Enter Password" name="psw" required>
-                    <button type="submit">Login</button>
-                  </div>
-                </form>
-              </div>
+        <div class="contentpagediv">
+          <div class="contentleft"><div id="formdiv"></div></div>
+          <div class="contentright">
+            <div class="loginform">
+              <form action="">
+                <div class="container">
+                  <label for="uname"><b>Username</b></label>
+                  <input
+                    type="text"
+                    placeholder="Enter Username"
+                    name="uname"
+                    required
+                  />
+                  <label for="psw"><b>Password</b></label>
+                  <input
+                    type="password"
+                    placeholder="Enter Password"
+                    name="psw"
+                    required
+                  />
+                  <button type="submit" onclick="getUser('andrei','abc123')">Login</button>
+                </div>
+              </form>
             </div>
           </div>
+        </div>
       </div>
       <div id="logindiv" class="pagediv hide">Login</div>
       <div id="registerdiv" class="pagediv hide">Register</div>
@@ -44,38 +53,38 @@
       <div id="link3div" class="pagediv hide">Link 3</div>
     </div>
     <!--End Page Content-->
-      <div class="clear"></div>
-      <div class="footer">
-        <!--FOOTERCONTAINER-->
-        <div class="footercontainer">
-          <div class="footercontent">
-            <div class="bvindos">
-              <h2 class="h2title">bem vindos</h2>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore
-              necessitatibus omnis reprehenderit, repellendus maiores dolorem
-              commodi repellat. Repudiandae veniam commodi.
-            </div>
-            <div class="agradecimentos">
-              <h2 class="h2title">agradecimentos</h2>
-              Soluta cum eligendi accusantium inventore, deserunt commodi
-              impedit? Reiciendis nemo quod voluptatem fuga! Consectetur id,
-              eligendi expedita cumque reiciendis sint magnam optio.
-            </div>
+    <div class="clear"></div>
+    <div class="footer">
+      <!--FOOTERCONTAINER-->
+      <div class="footercontainer">
+        <div class="footercontent">
+          <div class="bvindos">
+            <h2 class="h2title">bem vindos</h2>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore
+            necessitatibus omnis reprehenderit, repellendus maiores dolorem
+            commodi repellat. Repudiandae veniam commodi.
+          </div>
+          <div class="agradecimentos">
+            <h2 class="h2title">agradecimentos</h2>
+            Soluta cum eligendi accusantium inventore, deserunt commodi impedit?
+            Reiciendis nemo quod voluptatem fuga! Consectetur id, eligendi
+            expedita cumque reiciendis sint magnam optio.
           </div>
         </div>
-        <!--FOOTERCONTAIINER-->
-        <div class="footersidebar">
-          <h2 class="h2title">ligações recomendadas</h2>
-          <ul>
-            <li><a href="#">Lorem, ipsum dolor.</a></li>
-            <li><a href="#">Libero, modi eum?</a></li>
-            <li><a href="#">Ducimus, non repellat.</a></li>
-            <li><a href="#">Deleniti, voluptas quasi.</a></li>
-            <li><a href="#">Fugiat, cumque nesciunt!</a></li>
-          </ul>
-        </div>
       </div>
-      <!--.FOOTERCONTAINER-->
+      <!--FOOTERCONTAIINER-->
+      <div class="footersidebar">
+        <h2 class="h2title">ligações recomendadas</h2>
+        <ul>
+          <li><a href="#">Lorem, ipsum dolor.</a></li>
+          <li><a href="#">Libero, modi eum?</a></li>
+          <li><a href="#">Ducimus, non repellat.</a></li>
+          <li><a href="#">Deleniti, voluptas quasi.</a></li>
+          <li><a href="#">Fugiat, cumque nesciunt!</a></li>
+        </ul>
+      </div>
+    </div>
+    <!--.FOOTERCONTAINER-->
     <script src="js/scripts.js"></script>
   </body>
 </html>

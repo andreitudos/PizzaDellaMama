@@ -1,4 +1,3 @@
-
 .menubar {
   list-style-type: none;
   margin: 0;
@@ -7,11 +6,11 @@
   background-color: #333;
 }
 
-.menubar>li {
+.menubar > li {
   float: left;
 }
 
-.menubar>li>a {
+.menubar > li > a {
   display: inline-block;
   color: white;
   text-align: center;
@@ -19,7 +18,8 @@
   text-decoration: none;
 }
 
-.menubar>li a:hover, .dropdown:hover {
+.menubar > li a:hover,
+.dropdown:hover {
   background-color: red;
 }
 
@@ -28,7 +28,7 @@
   display: block;
 }
 
-.menubar>li.dropdown {
+.menubar > li.dropdown {
   display: inline-block;
 }
 
@@ -37,7 +37,7 @@
   position: absolute;
   background-color: #f9f9f9;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
@@ -49,17 +49,18 @@
   text-align: left;
 }
 
-.pagediv{
+.pagediv {
   width: 100%;
   min-height: 300px;
   background-color: gainsboro;
-  
-  }
-  .hide{
-    display: none;
-  }
+}
+.hide {
+  display: none;
+}
 
-.dropdown-content a:hover {background-color: red}
+.dropdown-content a:hover {
+  background-color: red;
+}
 /*.dropdown-content a:hover {background-color: #f1f1f1}*/
 
 .dropdown:hover .dropdown-content {
@@ -71,7 +72,7 @@ body {
   padding: 0;
   background-color: #171717;
   color: #717171;
-/*  background-image: url("../img/moon_PNG202.png");*/
+  /*  background-image: url("../img/moon_PNG202.png");*/
   background-size: 350px;
   background-repeat: no-repeat;
   background-position: 0px -160px;
@@ -90,7 +91,7 @@ a {
   height: 200px;
   margin: 0 10px 0 10px;
 }
-.container{
+.container {
   padding: 0 10px 0 10px;
   display: inline-block;
 }
@@ -104,7 +105,6 @@ a {
   height: auto;
   float: right;
   line-height: 1.8em;
-
 }
 .sidebarcontent {
   padding: 10px;
@@ -114,13 +114,13 @@ a {
   width: 100%;
   background-color: #2b2b2b;
   margin: 0 auto;
-  float: left;  
+  float: left;
   font-size: 0.7em;
   line-height: 1.5em;
 }
 
 .footer > h2 {
-   color: #ffffff;
+  color: #ffffff;
 }
 
 .footercontainer {
@@ -137,20 +137,20 @@ a {
   line-height: 1.5em;
 }
 
-.bvindos{
+.bvindos {
   width: 50%;
   float: left;
-  margin-right: 10px
- }
-.agradecimentos{
+  margin-right: 10px;
+}
+.agradecimentos {
   float: left;
   width: 45%;
   margin-left: 10px;
 }
 .footersidebar {
-    float: left;
-    width: 24%;
-    padding: 0 10px 0 0;
+  float: left;
+  width: 24%;
+  padding: 0 10px 0 0;
 }
 
 .h2title {
@@ -255,34 +255,38 @@ a {
   float: left;
 }
 /*Content Page */
-.contentpagediv{
-  float: left;;
+.contentpagediv {
+  float: left;
   width: 100%;
 }
-.contentleft{
+.contentleft {
   background-color: #f1f1f1;
   float: left;
   width: 70%;
 }
-.contentright{
+.contentright {
   float: left;
   width: 30%;
 }
 
 /*Login FORM*/
-form {border: 3px solid #f1f1f1;}
+form {
+  border: 3px solid #f1f1f1;
+}
 
-input[type=text], input[type=password] {
+input[type="text"],
+input[type="password"] {
   width: 100%;
-  padding: 12px 20px;
+  padding: 12px 10px;
   margin: 8px 0;
   display: inline-block;
   border: 1px solid #ccc;
   box-sizing: border-box;
 }
 
-button {
-  background-color: #4CAF50;
+button, 
+input[type="button"] {
+  background-color: #4caf50;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
