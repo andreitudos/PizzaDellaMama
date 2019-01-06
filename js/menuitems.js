@@ -133,29 +133,6 @@ function startTest() {
 
   console.log("DOOOOM LOADED");
 
-  let Router = function(name, routes) {
-    return {
-      name: name,
-      routes: routes
-    };
-  };
-
-  let view = document.getElementById("formdiv");
-  let myFirstRouter = new Router("myFirstRouter", [
-    {
-      path: "/",
-      name: "Root"
-    },
-    {
-      path: "/about",
-      name: "About"
-    }
-  ]);
-  let currentPath = window.location.pathname;
-  if (currentPath === "/") {
-    view.innerHTML = "You are the root";
-  } else {
-  }
 }
 
 getIngredients();
