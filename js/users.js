@@ -1,4 +1,3 @@
-let loged = false;
 let users = [
     { userId : 1, nome: "andrei", password: "abc123", email:"andrei@gmail.com"},
     { userId : 2, nome: "user1", password: "abc123", email:"user1@gmail.com"},
@@ -6,7 +5,7 @@ let users = [
     { userId : 4, nome: "user3", password: "abc123", email:"user3@gmail.com" }
   ];
 
-
+let loged = false;
 //GET user
 function getUser(usr, pwd){
   let user;
@@ -26,12 +25,34 @@ function login(){
   let user = getUser(username, password);
     //alert(user);
   if(user){
-    sessionStorage.setItem(user.userId, user.nome, user.email);
-    loged = true;
-  }
- alert(sessionStorage.getItem(userId));
+   
+    sessionInit(user.userId, user.nome);
+  
+    document.getElementById("loginform").style.display = 'none';
+    alert(sessionStorage.getItem(userId));
+  }else{
+      alert("Nome do utilizador ou palavra passe invalido");
+  };
+
+
+  function sessionInit(key,sname){
+    if (typeof(Storage) !== "undefined") {
+        // Code for localStorage/sessionStorage.
+        sessionStorage.setItem(key, sname);
+      } else {
+        // Sorry! No Web Storage support..
+        console.log("Sorry! No Web Storage support..");
+      }
+  };
+
+
+};
+
+function logout(){
+   let key= sessionStorage.getItem(user.userId);
+    sessionStorage.removeItem(key);
 };
 
 function createUser(...arg){
   
-}
+};

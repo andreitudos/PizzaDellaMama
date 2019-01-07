@@ -14,8 +14,10 @@ function getMenuItems() {
     let list = document.createElement("ul");
     list.setAttribute("id", "menubar");
     list.setAttribute("class", "menubar");
-
+   
     for (let i = 0; i < array.length; i++) {
+     
+     
       // Create the list item:
       let itemText = array[i];
       let item = document.createElement("li");
@@ -25,11 +27,15 @@ function getMenuItems() {
       item.setAttribute("id", itemText.replace(/\s/g, "").toLowerCase());
       item.setAttribute("onclick", "setActive(this.id)");
 
-      // Set its contents:
+    
+         // Set its contents:
       item.appendChild(aItem);
 
       // Add it to the list:
       list.appendChild(item);
+ 
+
+     
     }
 
     //Return the constructed list:
