@@ -39,6 +39,7 @@ function login(){
     if (typeof(Storage) !== "undefined") {
         // Code for localStorage/sessionStorage.
         sessionStorage.setItem(key, sname);
+        setCookie(key,sname);
       } else {
         // Sorry! No Web Storage support..
         console.log("Sorry! No Web Storage support..");
@@ -52,6 +53,13 @@ function logout(){
    let key= sessionStorage.getItem(user.userId);
     sessionStorage.removeItem(key);
 };
+
+
+function setCookie(cname, cvalue, exdays) {
+  //let d = new Date("january 10, 2019");
+ // d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  document.cookie = cname + "=" + cvalue + ";"  + "january 10, 2019";
+}
 
 function createUser(...arg){
   

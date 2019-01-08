@@ -13,7 +13,7 @@ function getMenuItems() {
     // Create the list element:
     let list = document.createElement("ul");
     list.setAttribute("id", "menubar");
-    list.setAttribute("class", "menubar");
+    list.setAttribute("class", "topmenu");
    
     for (let i = 0; i < array.length; i++) {
      

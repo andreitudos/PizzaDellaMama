@@ -12,13 +12,16 @@
   <body onload="fstart()">
     <div class="wrap">
       <!--Navigationn Bar-->
-      <div id="navdiv" class="nav"></div>
+      <div class="header">
+        <div id="navdiv" class="navigation"></div>
+      </div>
+
       <!--End Navigationn Bar-->
 
       <!-- Page Content-->
       <div id="homediv" class="pagediv">
         <div class="contentpagediv">
-          <div class="contentleft"><div id="formdiv"></div></div>
+          <div class="contentleft"><div id="formdiv"> <h1>Base da Pizza</h1></div></div>
           <div class="contentright">
             <div class="loginform">
               <form action="" id="loginform">
@@ -40,6 +43,7 @@
                     required
                   />
                   <button type="submit" onclick="login()">Login</button>
+                  <button type="submit" onclick="setCookie('andrei','cardan','364')">Login</button>
                 </div>
               </form>
             </div>
