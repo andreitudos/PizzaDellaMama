@@ -59,7 +59,7 @@ function getPizzaBase() {
     // Create the list element:
 
     let form = document.createElement("form");
-    form.setAttribute("id", "pizzabasefomr");
+    form.setAttribute("id", "pizzabaseform");
     let fragment = document.createDocumentFragment();
     let btnIngredinetes = document.createElement("input");
     let qntText = document.createElement("input");
@@ -113,7 +113,6 @@ function getIngredients() {
     "Banana"
   ];
 
-  document.getElementById("pizzabasefomr").classList.add("hide");
   let element = document.getElementById("formdiv");
   let fragment = document.createDocumentFragment();
   let btnConcluir = document.createElement("input");
@@ -129,9 +128,12 @@ function getIngredients() {
     fragment.appendChild(label);
     fragment.appendChild(document.createElement("br"));
     fragment.appendChild(btnConcluir);
+
+  
   });
   // Add the contents of
   element.appendChild(fragment);
+  document.getElementById("pizzabaseform").classList.add("hide");
 }
 
 function startTest() {
@@ -141,7 +143,7 @@ function startTest() {
 
 }
 
-getIngredients();
+
 
 function fstart() {
   startTest();

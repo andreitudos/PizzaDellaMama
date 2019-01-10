@@ -61,6 +61,43 @@ function setCookie(cname, cvalue, exdays) {
   document.cookie = cname + "=" + cvalue + ";"  + "january 10, 2019";
 }
 
-function createUser(...arg){
-  
+
+  function setCookies(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires="+ d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+
 };
+
+let myCookies = {};
+
+function saveCookies(){
+  myCookies["_username"] = document.getElementById("usernameTxt").value;
+  myCookies["_email"] = document.getElementById("emailTxt").value;
+
+  document.cookie="";
+  let expiresAttribute = new Date(Date.now()+60+1000).toString();
+  let cookieString ="";
+  for(let key in myCookies){
+    cookieString=key+"="+myCookies[key]+";"+expiresAttribute+";";
+    document.cookie=cookieString;
+  }
+
+  document.getElementById("out").innerHTML=document.cookie;
+}
+
+function loadCookies(){
+  myCookies ={};
+
+  let kv = document.cookie.split(";");
+
+  for(let id in kv){
+    let cookie = kv[id].split("=");
+
+    myCookies[cookie[0].trim()]=cookie[1];
+  }
+  document.getElementById("usernameTxt").value = myCookies["_username"];
+  document.getElementById("emailTxt").value=myCookies["_email"];
+
+}
