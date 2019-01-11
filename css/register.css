@@ -1,5 +1,16 @@
-body{
-    align-content: center;
+html, body {
+    height: 100%;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+html {
+    display: table;
+    margin: auto;
+}
+
+body {
+  vertical-align: middle;
+  text-align: center;
 }
 .wrapper{
     width: 400px;
@@ -9,22 +20,42 @@ body{
     border-radius: 4px;
     background-color: white;
     padding: 20px;
-    position: absolute;
+    float: left;
+    text-align: center;
+}
+.login-wrapper{
+    width: 250px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    border-radius: 4px;
+    background-color: white;
+    padding: 20px;
+    float: left;
+    text-align: center;
 }
 
 .columndiv{
-    width: 50%;
+    width: 45%;
     float: left;
-    margin: 0 0px 10px 0px;
+    padding: 0 0px 10px 0px;
+    text-align: left;
+    position: relative;
+
 }
 .rowdiv{
     width: 100%;
     float: left;
     margin: 0 0px 10px 0px;
+    text-align: left;
+}
+.centerdiv{
+    min-width: 10%;
+    float: left;
 }
 
-p{
-    float: left;
+.centertext{
+    text-align: center;
 }
 
 hr{
@@ -32,6 +63,50 @@ hr{
 }
 
 input,select{
-    width: auto;
+    width: 100%;
    
 }
+input[type=button]{
+    padding: 12px 20px;
+    margin: 8px 0;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid black;
+}
+
+input[type=text], input[type=email], input[type=password], select{
+    width: 100%;
+    padding: 6px 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid rgb(0, 0, 0);
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+.createbtn{
+    background-color: #ee4b4b;
+    color: white;
+}
+.signbtn{
+    background-color: #b3b3b3;
+    color: black;
+}
+
+.title{
+    color: #ee4b4b;
+}
+
+h3{
+    text-align: left;
+}
+
+textarea:focus, input:focus, select:focus{
+    outline: none;
+    border-color: #ee4b4b;
+}
+
+input:required {
+    background-color:pink;
+  }

@@ -26,16 +26,20 @@ function getMenuItems() {
 
       item.setAttribute("id", itemText.replace(/\s/g, "").toLowerCase());
       item.setAttribute("onclick", "setActive(this.id)");
-
     
+      
          // Set its contents:
       item.appendChild(aItem);
 
+      if(itemText==='Register'){
+        item.setAttribute("onclick", "registerPage()");
+      }
+      if(itemText==='Login'){
+        item.setAttribute("onclick", "loginPage()");
+      }
       // Add it to the list:
       list.appendChild(item);
- 
 
-     
     }
 
     //Return the constructed list:

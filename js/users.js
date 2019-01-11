@@ -100,3 +100,24 @@ function loadCookies(){
   document.getElementById("emailTxt").value=myCookies["_email"];
 
 }
+
+function registerPage(){
+  window.location.replace("register.html");
+}
+function loginPage(){
+  window.location.replace("login.html");
+}
+
+function setStyle(){
+  let u = document.getElementById("stylelink").href="/css/register.css";
+
+}
+
+function createUser(...arg){
+  alert(getDoc("fnameTxt"));
+}
+
+function getDoc(id){
+  let docVal =document.getElementById(id).value;
+  return docVal;
+}

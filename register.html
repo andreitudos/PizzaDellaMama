@@ -4,36 +4,42 @@
         <title></title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="css/register.css" />
+        <link rel="stylesheet" tytle="RSD" href="css/register.css" id="stylelink"/>
+        <script src="js/users.js"></script>
     </head>
     <body>
+        <h2 class="title">Pizza della Mamma</h2>
         <div class="wrapper">
-            <h2>Create account</h2> 
+            <div><h3>Create account</h3></div> 
             <div  class="columndiv">
-                    First name: <br> <input type="text" name="fname" id="fname">
+                    First name: <br> <input type="text" name="fnameTxt" id="fnameTxt" required>
             </div>
+            <div class="centerdiv"> &nbsp;</div>
             <div  class="columndiv">
-                    Last name:<br><input type="text" name="lname" value="lname">
+                    Last name:<br><input type="text" name="lnameTxt" id="lnameTxt" value="">
             </div>
             <div class="rowdiv">
-                    E-mail:<br> <input type="email" name="email" id="email" value="">
+                    E-mail:<br> <input type="email" name="emailTxt" id="emailTxt" value="">
             </div>
             <div  class="columndiv">
-                    Password: <br> <input type="password" name="pwd" id="pwd">
+                    Password: <br> <input type="password" name="pwdTxt" id="pwdTxt">
             </div>
+            <div class="centerdiv"> &nbsp;</div>
+
             <div  class="columndiv">
-                    Re-enter Password:<br><input type="password" name="repwd" value="">
+                    Re-enter Password:<br><input type="password" name="repwdTxt" id="repwdTxt"  value="">
             </div>
             <div class="rowdiv">
                     <hr>
             </div>
 
             <div  class="columndiv">
-                    Phonen number: <br> <input type="text" name="phone" id="phone">
+                    Phonen number: <br> <input type="text" name="phone" id="phoneTxt">
             </div>
-            
+            <div class="centerdiv"> &nbsp;</div>
             <div  class="columndiv">
-                    Country:<br><select name="country" id="country">
+                    Country:<br>
+                   <select name="countrySelect" id="countrySelect">
                             <option value="portugal" selected="selected">Portugal</option>
                             <option value="espanha">Espanha</option>
                             <option value="alemanha">Alemanha</option>
@@ -42,14 +48,13 @@
             </div>
 
             <div class="rowdiv">
-                    <input type="button" value="Create account" onclick="">
+                    <input type="button" class="createbtn" value="Create account" id="createBtn" onclick="createUser()">
             </div>
-            <div class="rowdiv"><h5>Already have an account?</h5></div>
+            <br>
+            <div class="rowdiv centertext">  Already have an account?</div>
             <div class="rowdiv">
-                    <input type="button" value="Sign in securely" onclick="">
+                    <input type="button" class="signbtn" value="Sign in securely" id="signBtn" onclick="">
             </div>
-
-
         </div>
     </body>
 </html>

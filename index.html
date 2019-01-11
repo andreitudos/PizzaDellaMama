@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title></title>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style.css" id="stylelink" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
     <script src="js/menuitems.js"></script>
     <script src="js/users.js"></script>
@@ -45,17 +45,9 @@
                     required
                   />
                   <button type="submit" onclick="login()">Login</button>
-                  <button type="submit" onclick="setCookie('andrei','cardan','364')">Login</button>
+                  <button type="submit" onclick="setStyle()">Login</button>
                 </div>
-              </form>
-            
-                Username: <input type="text" id="usernameTxt">
-                Email: <input type="text" id="emailTxt">
-                <button onclick="saveCookies()">Save</button>
-                <button onclick="loadCookies()">Load from cookies</button>
-            
-<p id="out"></p>
-
+              </form>                       
             </div>
           </div>
         </div>
