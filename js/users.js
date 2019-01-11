@@ -21,15 +21,15 @@ return user;
 function login(){
   username = document.getElementById('uname').value;
   password = document.getElementById('psw').value;
-
+  let cryptkey= 'abc123XYZ';
   let user = getUser(username, password);
     //alert(user);
+let usrString =(user.userId).toString();
+    let usrID = CryptoJS.AES.encrypt(usrString, cryptkey); 
   if(user){
-   
-    sessionInit(user.userId, user.nome);
-  
-    document.getElementById("loginform").style.display = 'none';
-    alert(sessionStorage.getItem(userId));
+ 
+    sessionInit(usrID, user.nome);
+
   }else{
       alert("Nome do utilizador ou palavra passe invalido");
   };
@@ -76,7 +76,6 @@ function saveCookies(){
   myCookies["_username"] = document.getElementById("usernameTxt").value;
   myCookies["_email"] = document.getElementById("emailTxt").value;
 
-  document.cookie="";
   let expiresAttribute = new Date(Date.now()+60+1000).toString();
   let cookieString ="";
   for(let key in myCookies){
